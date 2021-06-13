@@ -1,0 +1,26 @@
+baseURL: "https://ny-a.github.io/hugo-blog/"
+languageCode: "ja-jp"
+title: "My Hugo Blog"
+theme: "PaperMod"
+defaultContentLanguage: ja
+languages:
+    ja:
+        languageName: "Japanese"
+        weight: 1
+        menu:
+            main:
+                - name: Archive
+                  url: archives
+                  weight: 1
+params:
+    description: "Blog"
+    defaultTheme: auto
+    ShowReadingTime: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowToc: true
+    homeInfoParams:
+        Title: "Blog"
+        Content: ""
