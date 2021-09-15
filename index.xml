@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Hugo Blog</title><link>https://ny-a.github.io/hugo-blog/</link><description>Recent content on My Hugo Blog</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 19 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ny-a.github.io/hugo-blog/index.xml" rel="self" type="application/rss+xml"/><item><title>AlpineベースのPythonコンテナのパッケージ管理</title><link>https://ny-a.github.io/hugo-blog/posts/2021-07/alpine-python-libraries/</link><pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate><guid>https://ny-a.github.io/hugo-blog/posts/2021-07/alpine-python-libraries/</guid><description>Python を Docker 内で動かそうとするとき、 Alpine ベースのコンテナを使うと軽量で嬉しかったりしますが、 pip でパッケージをインストールしようとすると、x86_64 アーキテクチャでも、 バイナリが降ってくる代わりにソースからビルドする必要があったりします。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>My Hugo Blog</title><link>https://ny-a.github.io/hugo-blog/</link><description>Recent content on My Hugo Blog</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Wed, 15 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ny-a.github.io/hugo-blog/index.xml" rel="self" type="application/rss+xml"/><item><title>TsukuCTF2021 Writeup(OSINT以外)</title><link>https://ny-a.github.io/hugo-blog/posts/2021-09/tsukuctf-2021-writeup/</link><pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate><guid>https://ny-a.github.io/hugo-blog/posts/2021-09/tsukuctf-2021-writeup/</guid><description>TsukuCTF
+ny_a です。182チーム中5位でした。
+Web Logonly 解けませんでした。
+デカいログを見てみると、214154行目に攻撃が成功しているという情報しかありませんでした。
+Kali Linux は使ったことないな〜、ダウンロードも面倒だし、と思いググってみると、 kalilinux/wordlists リポジトリに rockyou というパスワードリストがあるようでした。サイズも十分大きいし、最終更新も8年前なのでバージョンの問題もなさそうです。 ungzip して214154行目の qwertzu で incorrect。別ファイルかなーと思い諦めました。
+ちなみに、作問者さんに聞いてみた所想定解法っぽいですね。1つ古い？バージョンだと /dev/null が入っていないらしいです。なるほど。
+guess 問題なのでエスパーすればよかったですね。
+digits python の int() が int を返せば ok そうです。 ドキュメントを見るとアンダースコアを任意の位置に入れることができるようです。
+1_1_1111111
+Login SQLi ですか。普通にフレームワークを使ってバックエンドの開発をやっていると、そのような脆弱性を作り込むこともほぼないので、 攻撃方法についてはあまり詳しくなく……。調べながらクエリを投げたらログインできました。
+Login2, Login3 解けませんでした。
+同じようにログインはできましたが、あんまり攻撃するのも申し訳なくなってきたので諦めました。 バックエンドエンジニアにこんなことさせないで……と思いましたが、次までには解けるように練習しておきます。
+Journey HTTP ステータスコードを見ろと言われたので見ると、Method not allowed。
+OPTIONS の返答から一つずつ試していくと、CONNECT で referrer 関連のエラーメッセージが出ます。
+curl -XCONNECT --referrer (railwaysのURL) とかするとフラグが得られます。
+gyOTAKU 解けませんでした。
+適当にローカルファイルを iframe に表示する HTML を書いて、適当に GitHub Pages にデプロイしてみたものの、キャッシュの問題か404……。 適当にローカルに nginx コンテナでサーバーを建ててみたものの、ディレクトリ一覧はなぜか表示されず。</description></item><item><title>AlpineベースのPythonコンテナのパッケージ管理</title><link>https://ny-a.github.io/hugo-blog/posts/2021-07/alpine-python-libraries/</link><pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate><guid>https://ny-a.github.io/hugo-blog/posts/2021-07/alpine-python-libraries/</guid><description>Python を Docker 内で動かそうとするとき、 Alpine ベースのコンテナを使うと軽量で嬉しかったりしますが、 pip でパッケージをインストールしようとすると、x86_64 アーキテクチャでも、 バイナリが降ってくる代わりにソースからビルドする必要があったりします。
 しかし、最近は Alpine のパッケージも充実してきているので、 (バージョンを気にしなければ) 割と apk add できることがあります。
 numpy, scipy, scikit-learn, pandas, boto3 などは alpine のパッケージとして提供されているので、 x86_64 向けバイナリとして入手することができます。
 Alpine のパッケージは Arch Linux の PKGBUILD 由来の APKBUILD というファイルで定義されているので、 公式リポジトリに入っていないパッケージも自分で作成すると嬉しいかもしれません。</description></item><item><title>Googleで数学グラフ</title><link>https://ny-a.github.io/hugo-blog/posts/2021-07/google-graph/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://ny-a.github.io/hugo-blog/posts/2021-07/google-graph/</guid><description>Google で数式の計算ができることは知っていたのですが、 方程式を検索するとグラフが表示されて驚きました。
