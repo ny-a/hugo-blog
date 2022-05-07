@@ -32,7 +32,7 @@ You may need to touch your authenticator to authorize key generation.
 Key enrollment failed: requested feature not supported
 </code></pre></div><p>Yubikey が ed25519 に対応していないのでこちらは当然失敗しました。</p><p>生成に成功した ecdsa-sk キーを使って ssh しようとしてみましたが、相手が openssh7.9p1 だったので失敗しました。</p><p>とはいえ Yubikey の SmartCard の方が〜〜〜、というか対応サーバーが十分普及したら使うか考えましょう。</p><p>リリースノート、FIDO2/U2F と書いている部分と FIDO2 しか書いていない部分があって、 U2F しか書いていない部分はない？ので、
 U2F についてはよく分かっていません……というか、認証周りいろいろややこしすぎて……追い追い調べてまとめようと思います。</p></div><footer class=post-footer><nav class=paginav><a class=prev href=https://ny-a.github.io/hugo-blog/posts/2020-02/terminal-color-from-appsignal/><span class=title>« 前のページ</span><br><span>ターミナルの色をAppSignalベースに変更しました</span></a>
-<a class=next href=https://ny-a.github.io/hugo-blog/posts/2020-02/tried-to-openssh-8-2-fido/><span class=title>次のページ »</span><br><span>OpenSSH8.2でfido2/u2fを試そうとしました</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://ny-a.github.io/hugo-blog/>My Hugo Blog</a></span>
+<a class=next href=https://ny-a.github.io/hugo-blog/posts/2020-02/tried-to-openssh-8-2-fido/><span class=title>次のページ »</span><br><span>OpenSSH8.2でfido2/u2fを試そうとしました</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2022 <a href=https://ny-a.github.io/hugo-blog/>My Hugo Blog</a></span>
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
         <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>

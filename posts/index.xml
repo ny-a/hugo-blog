@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Hugo Blog</title><link>https://ny-a.github.io/hugo-blog/posts/</link><description>Recent content in Posts on My Hugo Blog</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Wed, 15 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ny-a.github.io/hugo-blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>TsukuCTF2021 Writeup(OSINT以外)</title><link>https://ny-a.github.io/hugo-blog/posts/2021-09/tsukuctf-2021-writeup/</link><pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate><guid>https://ny-a.github.io/hugo-blog/posts/2021-09/tsukuctf-2021-writeup/</guid><description>TsukuCTF
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Hugo Blog</title><link>https://ny-a.github.io/hugo-blog/posts/</link><description>Recent content in Posts on My Hugo Blog</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 16 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ny-a.github.io/hugo-blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>TsukuCTF2021 Writeup(OSINT)</title><link>https://ny-a.github.io/hugo-blog/posts/2021-09/tsukuctf-2021-writeup-osint/</link><pubDate>Thu, 16 Sep 2021 00:00:00 +0000</pubDate><guid>https://ny-a.github.io/hugo-blog/posts/2021-09/tsukuctf-2021-writeup-osint/</guid><description>TsukuCTF
+ny_a です。ごめんなさい。
+OSINT OSINT メインの CTF なのに OSINT 以外の Writeup を書いてしまって反省しています。 ちゃんと書くので許して。
+今回は Google Lens 問が多かったようですね。 Google Lens については知っておりました。 知っていましたが、これだけ問題数があって、100点くらいの問題から500点くらいの問題まであります。 ということは、高得点の問題は多分 Google Lens でも一筋縄ではいかない問題なのでしょう。 きっと運営スタッフが何度も Lens で位置をズラしながら検索しても全く出なかったから高得点になっているに違いありません。 つまり、Lens の運命に託す時間があれば、なんとか言葉で表現して検索してみて、 1つでも多くの検索結果に目を通すのが最適解ということです。やる気が湧いてきました。
+よし、頑張るぞ〜〜〜〜〜〜〜！！！！！！！！！！！！！！！！
+というわけで、ひたすらキーワードを基にした画像検索と Google Maps の目 grep でのパワープレイの記録をお楽しみください。
+ramen そのまま画像検索に投げてみるも、うまく見つからず。 というかキーワードが &amp;ldquo;soup&amp;rdquo; になってしまう。いや、気持ちは分かる。
+インスタグラムのアカウントということなので、インスタ映えするラーメンを頑張って検索します。 「ラーメン インスタ」とかで検索したと思います。「ヤングコーン」とかもつけてみたけど出てこなかった記憶。
+麺と同じような淡い黄色の、クリーミーそうなスープ。 これだけ麺と色が近かったら、麺もスープとの境界があまり認識できていないかもしれません。 それに加えてこの不透明度、こうなってしまうともう麺は溺れてし
+……。
+スープの色やヤングコーン、お皿などの特徴を目に焼きつけて、目 grep します。
+すると、確かこの Instagrammer news が出てきました。ここに店の名前が書いてあるので、本店のアカウントを調べればいいです。
+shop なるほど、イオンモールですね。
+近くを通った2台の車のナンバーが、多分名古屋と滋賀。じゃあ滋賀のあたりですかね、知らんけど。
+トヨタの入っているイオンで探して、草津が出てきました。
+train 山手線と京浜東北線が併走している区間ですね。 あと山手線の方面表示が、電光掲示板の表示の方は隠れていなくて、 片方は東京・上野方面、もう片方は品川・渋谷方面と書かれていることが分かります。
+ということは、東京〜品川の、両端を含まない区間ということが分かります。
+あとは京浜東北線の快速が通過する駅は有楽町と新橋だけに絞ることができるので、 構内図を見ながら北改札などの特徴に合致するか調べます。
+15:35 から京浜東北線が停車するということで、時刻表から絞るかなーと思ったのですが、 普通に2択になったので時刻表は見ませんでした。</description></item><item><title>TsukuCTF2021 Writeup(OSINT以外)</title><link>https://ny-a.github.io/hugo-blog/posts/2021-09/tsukuctf-2021-writeup/</link><pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate><guid>https://ny-a.github.io/hugo-blog/posts/2021-09/tsukuctf-2021-writeup/</guid><description>TsukuCTF
 ny_a です。182チーム中5位でした。
 Web Logonly 解けませんでした。
 デカいログを見てみると、214154行目に攻撃が成功しているという情報しかありませんでした。
